@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.114s</div>
+<div class="counter">0.394s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">메인페이지_로딩</td>
-<td class="success">0.114s</td>
+<td class="success">0.394s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,7 +87,49 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modifed_date as modifed_3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_ order by posts0_.id DESC
+<pre>
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.1)
+
+2023-03-18 15:49:56.032  INFO 1442 --- [    Test worker] c.a.b.s.web.IndexControllerTest          : Starting IndexControllerTest using Java 1.8.0_292 on my-MacBookAir.local with PID 1442 (started by ash in /Users/ash/IdeaProjects/awsash)
+2023-03-18 15:49:56.036  INFO 1442 --- [    Test worker] c.a.b.s.web.IndexControllerTest          : No active profile set, falling back to default profiles: default
+2023-03-18 15:49:56.661  INFO 1442 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-18 15:49:56.727  INFO 1442 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
+2023-03-18 15:49:57.386  INFO 1442 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-03-18 15:49:57.438  INFO 1442 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-18 15:49:57.439  INFO 1442 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2023-03-18 15:49:57.574  INFO 1442 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-18 15:49:57.576  INFO 1442 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1532 ms
+2023-03-18 15:49:57.700  INFO 1442 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-18 15:49:57.838  INFO 1442 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-18 15:49:57.843  INFO 1442 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem://localhost/~/testdb'
+2023-03-18 15:49:58.214  INFO 1442 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-18 15:49:58.258  INFO 1442 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2023-03-18 15:49:58.295  INFO 1442 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-18 15:49:58.428  INFO 1442 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+Hibernate: drop table if exists posts
+Hibernate: drop table if exists user
+Hibernate: create table posts (id bigint not null auto_increment, created_date datetime(6), modifed_date datetime(6), author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
+Hibernate: create table user (id bigint not null auto_increment, created_date datetime(6), modifed_date datetime(6), email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
+2023-03-18 15:49:59.147  INFO 1442 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-18 15:49:59.153  INFO 1442 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-18 15:49:59.852  WARN 1442 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+SecurityConfig.configure
+2023-03-18 15:50:00.252  INFO 1442 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33bd9ac3, org.springframework.security.web.context.SecurityContextPersistenceFilter@30adae45, org.springframework.security.web.header.HeaderWriterFilter@41bbdd8a, org.springframework.security.web.authentication.logout.LogoutFilter@2d5d001f, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2213854b, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7b1d2f65, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7e28f150, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7c857e8f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@792eeae6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66e62fc4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42028589, org.springframework.security.web.session.SessionManagementFilter@3bf4644c, org.springframework.security.web.access.ExceptionTranslationFilter@368ff8be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1cda75be]
+2023-03-18 15:50:00.405  INFO 1442 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-18 15:50:00.451  INFO 1442 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-18 15:50:00.762  INFO 1442 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50443 (http) with context path ''
+2023-03-18 15:50:00.786  INFO 1442 --- [    Test worker] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2023-03-18 15:50:00.796  INFO 1442 --- [    Test worker] c.a.b.s.web.IndexControllerTest          : Started IndexControllerTest in 4.85 seconds (JVM running for 9.682)
+2023-03-18 15:50:00.986  INFO 1442 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-18 15:50:00.988  INFO 1442 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-18 15:50:00.994  INFO 1442 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modifed_date as modifed_3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_ order by posts0_.id DESC
 </pre>
 </span>
 </div>
@@ -99,7 +141,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 2023. 3. 13 오후 12:17:40</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 2023. 3. 18 오후 3:50:03</p>
 </div>
 </div>
 </body>
