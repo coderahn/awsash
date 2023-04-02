@@ -2,7 +2,7 @@ language: java
 jdk:
   - openjdk8
 
-#main 브랜치가 푸시될 때 실행
+#main 브랜치가 푸시될 때 실행!
 branches:
   only:
     - main
